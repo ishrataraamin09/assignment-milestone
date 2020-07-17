@@ -22,28 +22,29 @@ function woodCalculator(chair, table, bed){
  console.log("The total wood needed is :",result);
 
 
-// function brickCalculator(building){
-//     var res1 = 0;
-//     var res2 = 0;
-//     var res3 = 0;
-//     var floor = 30;
-//  for (var i = 0 ; i<building.length ; i++){
-//      if(floor >= 1 && floor<=10 ){
-//         res1 = 10*15*1000;
-        
-//      } else if (floor>= 11 && floor<=20){
-//          res2 = 10*12*1000;
-        
-//      } else if(floor>=21) { 
-//          res3 = 10*1000*flo
-//      }
-//  }
-//   var totalResult = res1+res2+res3;
-//   return totalResult ;
-// }
+function brickCalculator(floor){
+    var result1 = 0;
+    var result2 = 0;
+    var result3 = 0;
+      if(floor<0){
+         return false;
+      }
+      else if(floor >= 1 && floor<=10 ){
+       result1 = floor*15*1000;
+       return result1 ;
+     }  
+       else if (floor>= 11 && floor<=20){
+        result2 = ((floor-10)*12*1000)+(10*15*1000);
+        return result2 ;
+     }  
+       else if(floor>=21) { 
+        result3 = ((floor-20)*10*1000)+(10*12*1000)+(10*15*1000);
+        return result3;
+     }
 
-// var result = brickCalculator();
-// console.log(result);
+  }
+  var result = brickCalculator(50);
+   console.log(result);
 
 
 function tinyFriend(names){
